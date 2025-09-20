@@ -1,0 +1,10 @@
+<?page title="Auto Generated index.zul"?>
+<zk>
+	<!-- <window title="Hello World!!" border="normal" width="200px" id="IndexMy">  -->
+		
+		<div id="div01" apply="com.demo.zk.C1">
+			<label value="You are using: ${desktop.webApp.version}" />
+			<button id="btn1" label="abc"  />
+		</div>
+	<!-- </window>-->
+</zk>

@@ -35,12 +35,17 @@ public class JettyByWebAppContext {
 		// ==== แบบใช้ WebAppContext ต้องเพิ่ม lib = jetty-webapp
 		var webapp = new WebAppContext();
 		webapp.setContextPath("/"); // อยู่ใน root เลย
-		//webapp.setCompactPath(true);
 
 		java.net.URL webResource = JettyByWebAppContext.class.getResource("/webapp/");
 		System.out.println("webResource : " + webResource.toString());
-		//รันด้วย .jar = jar:file:/E:/javaDemo1/demojetty10/target/demojetty10-0.0.1.jar!/webapp/
-		//รันด้วย IDE = file:/D:/javaDemo1/demojetty10/target/classes/webapp/
+		System.out.println("toExternalForm : " + webResource.toExternalForm());
+		//รันด้วย .jar 
+		//webResource : jar:file:/D:/javaDemo1/demojetty10/target/demojetty10-0.0.1.jar!/webapp/
+		//toExternalForm : jar:file:/D:/javaDemo1/demojetty10/target/demojetty10-0.0.1.jar!/webapp/
+		//
+		//รันด้วย IDE 
+		//webResource : file:/D:/javaDemo1/demojetty10/target/classes/webapp/
+		//toExternalForm : file:/D:/javaDemo1/demojetty10/target/classes/webapp/
 		webapp.setWarResource(Resource.newResource(webResource));
 	 
 		// เพิ่ม servlet
